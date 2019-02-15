@@ -33,36 +33,44 @@ const data = {
     ]
 }
 
+const catArray = data.catdata
+for (let index = 0; index < catArray.length; index++) {
+    const element = catArray[index];
+    const currentCat = element;
+    
+    const firstCatName = document.getElementsByClassName('Cats').innerHTML
+    console.log(firstCatName)
+    // const firstCatBreed = data.catdata[0].breed
+    // if (firstCatId.innerText === firstCatBreed) {
+    // runThis()
+    // }
+    
+}
+
+function displayCat(){
+
+}
+
 const firstDiv = document.getElementById('ragdoll')
-firstDiv.onclick = function() {
+firstDiv.onclick = function runThis() {
 
-const firstCatId = document.getElementById('ragdoll')
+
+
+// console.log(firstCatId.innerText, firstCatBreed);
+
+// if (firstCatId.innerText === firstCatBreed) {
+//     displayCatImage()
+//  }
+// }
+
+function displayCatImage() {
+
 const firstCatBreed = data.catdata[0].breed
+const firstCatUrl = data.catdata[0].url
 
-console.log(firstCatId.innerText, firstCatBreed);
-
-if (firstCatId.innerText === firstCatBreed) {
-    console.log('doei')
-    
-}
-
-// const firstCatBreed = data.catdata[0].breed
-// const firstCatUrl = data.catdata[0].url
-
-// const firstImage = document.createElement('img')
-// firstImage.src = firstCatUrl
-
-// firstDiv.appendChild(firstImage)
-
-
+const firstImage = document.createElement('img')
+firstImage.src = firstCatUrl
+firstDiv.appendChild(firstImage)
 
 }
-
-// const catArray = data.catdata
-
-// catdata.array.forEach(catObject => {
-
-
-
-    
-// });
+}
