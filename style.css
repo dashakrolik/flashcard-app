@@ -1,0 +1,12 @@
+.Cats {
+    width: 25em;
+    border: 1em solid pink;
+    padding: 1em;
+    margin: 1em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.catcontainer {
+    display: flex
+}
