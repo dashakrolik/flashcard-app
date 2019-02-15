@@ -33,44 +33,76 @@ const data = {
     ]
 }
 
-const catArray = data.catdata
-for (let index = 0; index < catArray.length; index++) {
-    const element = catArray[index];
-    const currentCat = element;
+const catDivs = document.getElementsByClassName('Cats')
+
+for (let index = 0; index < catDivs.length; index++) {
+    const catDiv = catDivs[index];
+
+    catDiv.onclick = function(event){
+        const clickedCat = event.target.innerText
+        const currentCat = data.catdata.find(cat => cat.breed === clickedCat)
+
+        console.log(currentCat.url)
+        // create img
+        // assign a src with the currentCat url
+        // event.target.appendChild(newImg)
+    }
     
-    const firstCatName = document.getElementsByClassName('Cats').innerHTML
-    console.log(firstCatName)
-    // const firstCatBreed = data.catdata[0].breed
-    // if (firstCatId.innerText === firstCatBreed) {
-    // runThis()
+}
+
+// catDivs.onclick = function(){
+
+    // const catArray = data.catdata
+    // for (let index = 0; index < catArray.length; index++) {
+    //     const element = catArray[index];
+    //     const currentCat = element;
+        
+    //     const breed = element.breed
+    //     console.log(element.url)
+
+
+
+        // if (breed === document.getElementsByClassName('Cats').innerHTML)
+        // {
+        //     displayCatImage(breed)
+        // }
+
+        // const firstCatName = document.getElementsByClassName('Cats').innerHTML
+        // console.log(firstCatName)
+        // const firstCatBreed = data.catdata[0].breed
+        // if (firstCatId.innerText === firstCatBreed) {
+        // runThis()
+        // }
+        
     // }
-    
-}
-
-function displayCat(){
-
-}
-
-const firstDiv = document.getElementById('ragdoll')
-firstDiv.onclick = function runThis() {
-
-
-
-// console.log(firstCatId.innerText, firstCatBreed);
-
-// if (firstCatId.innerText === firstCatBreed) {
-//     displayCatImage()
-//  }
 // }
 
-function displayCatImage() {
 
-const firstCatBreed = data.catdata[0].breed
-const firstCatUrl = data.catdata[0].url
+// const firstDiv = document.getElementById('ragdoll')
+// firstDiv.onclick = function runThis() {
 
-const firstImage = document.createElement('img')
-firstImage.src = firstCatUrl
-firstDiv.appendChild(firstImage)
 
-}
+
+// // console.log(firstCatId.innerText, firstCatBreed);
+
+// // if (firstCatId.innerText === firstCatBreed) {
+// //     displayCatImage()
+// //  }
+// // }
+
+function displayCatImage(breed) {
+
+    console.log(breed)
+    if (breed === document.getElementsByClassName('Cats').innerHTML){
+
+    }
+
+
+
+// const firstCatBreed = data.catdata[0].breed
+// const firstCatUrl = data.catdata[0].url
+
+// const firstImage = document.createElement('img')
+// firstImage.src = firstCatUrl
+// firstDiv.appendChild(firstImage)
 }
